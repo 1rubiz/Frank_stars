@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head')%>
+    <title>Document</title>
+</head>
+<body>
+    <!-- nav stays here -->
+    <%- include('./partials/nav')%>
+    <div class="container-fluid desktop_nav">
+    <div class="row">
+        <div class="col-3 box">
+            <img src="logo.jpg" width="150px" height="150px">
+        </div>
+        <div class="col-9 box fles top">
+            <a href="/"><h6>HOME</h6></a>
+            <h6><a href="/gallery"> GALLERY</a></h6>
+           <a href="/portfolio"><h6>PORTFOLIO</h6></a>
+           <a href="/blog"><h6>BLOG</h6></a>
+           <a href="/about" class="active_a"><h6>ABOUT</h6></a>
+           <h6><a href="/contact">CONTACT</a></h6>
+            <button class="btn btn-block book" disabled><a href="/booking">Book Online</a></button>
+        </div>
+    </div>
+</div>
+    <%- include('./partials/register')%>
+     <%- include('./partials/mobile_nav')%>
+    <div class="container-fluid blog">
+        <div class="row blog_head">
+            <div class="col-12">
+                <h2>About Us</h2>
+            </div>
+        </div>
+        <div class="row about_row">
+            <div class="col-xs-1 col-md-6 col-lg-6">
+                <img src="helpdesk.png" class="about_img img-thumbnail">
+            </div>
+            <div class="col-xs-1 col-md-6 col-lg-6 about_text">
+                <h4>About Frankstars Unisex Salon</h4>
+                <p>We are dedicated to give give you that unique look that will make you stand out nicely and give you that confidence boost that you deserve.
+                </p>
+            </div>
+        </div>
+        <div class="row about_row">
+            <div class="col-xs-1 col-md-6 col-lg-6 about_text">
+                <h4>About the CEO</h4>
+                <p>
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                </p>
+            </div>
+            <div class="col-xs-1 col-md-6 col-lg-6">
+                <img src="images/star1.jpg" alt="CEO" class="about_img img-thumbnail">
+            </div>
+        </div>
+        
+    </div>
+    <%- include('./partials/foot')%>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head')%>
+    <title>Document</title>
+</head>
+<body>
+    <!-- nav stays here -->
+    <%- include('./partials/nav')%>
+    <div class="container-fluid desktop_nav">
+    <div class="row">
+        <div class="col-3 box">
+            <img src="logo.jpg" width="150px" height="150px">
+        </div>
+        <div class="col-9 box fles top">
+            <a href="/"><h6>HOME</h6></a>
+            <h6><a href="/gallery"> GALLERY</a></h6>
+           <a href="/portfolio"><h6>PORTFOLIO</h6></a>
+           <a href="/blog"><h6>BLOG</h6></a>
+           <a href="/about"><h6>ABOUT</h6></a>
+           <a href="/contact"><h6>CONTACT</h6></a>
+           <button class="btn btn-block book" disabled><a href="/booking">Book Online</a></button>
+        </div>
+    </div>
+</div>
+    <%- include('./partials/mobile_nav')%>
+    <%- include('./partials/register')%>
+    <div class="container-fluid page404 blog">
+       <div class="row">
+        <div class="col-12 about_text">
+            <h1>404 ERROR</h1>
+            <h2>File Not Found</h2>
+        </div>
+       </div>
+    </div>
+    <%- include('./partials/foot')%>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head')%>
+    <title>Document</title>
+</head>
+<body>
+    <!-- nav stays here -->
+    <%- include('./partials/nav')%>
+    <div class="container-fluid desktop_nav">
+    <div class="row">
+        <div class="col-3 box">
+            <img src="logo.jpg" width="150px" height="150px">
+        </div>
+        <div class="col-9 box fles top">
+            <a href="/"><h6>HOME</h6></a>
+            <h6><a href="/gallery"> GALLERY</a></h6>
+           <a href="/portfolio"><h6>PORTFOLIO</h6></a>
+           <a href="/blog"><h6>BLOG</h6></a>
+           <a href="/about"><h6>ABOUT</h6></a>
+           <a href="/contact" class="active_a"><h6>CONTACT</h6></a>
+            <button class="btn btn-block book" disabled><a href="/booking">Book Online</a></button>
+        </div>
+    </div>
+</div>
+    <%- include('./partials/mobile_nav')%>
+    <%- include('./partials/register')%>
+    <div class="container-fluid blog">
+        <div class="row">
+            <div class="col-12 blog_head">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+        <div class="row blog_body">
+            <div class="col-xs-1 col-md-6 col-lg-6">
+              <h2>  Via Direct Email</h2>
+        </div>
+        <div class="col-xs-1 col-md-6 col-lg-6">
+                <div class="col-12">
+                <div class="form-control">
+                    <form action="#" id="contact_form">
+                        <input class="form-control input-lg contact__form" type="text" name="fullname" id="fullname_contact" placeholder="Full Name" required><br>
+                        <input type="email" id="email_contact" placeholder="Email Address" class="form-control input-lg contact__form" required><br>
+                        <input type="text" id="subject_contact" placeholder="Subject" class="form-control input-lg contact__form" required><br>
+                        <textarea id="body_contact" class="contact__form" placeholder="Type your message here, we will get back to you shortly ...." cols="34" rows="10" required></textarea>
+                        <button class="btn btn-block btn-success" disabled>Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row blog">
+            <div class="col-xs-1 col-md-6 col-lg-6">
+                <h2>Via Social Media Platforms</h2>
+            </div>
+            <div class="col-xs-1 col-md-6 col-lg-6">
+                <h6 class="media"><i class="fa fa-facebook-square"></i> Facebook</h6>
+                <h6 class="media"><i class="fa fa-twitter-square"></i> Twitter</h6>
+                <h6 class="media"><i class="fa fa-google-plus"></i> Google Plus</h6>
+                <h6 class="media"><i class="fa fa-linkedin-square"></i> LinkedIn</h6>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/foot')%>
+</body>
+</html>

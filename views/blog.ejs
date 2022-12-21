@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head')%>
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/nav')%>
+    <div class="container-fluid desktop_nav">
+       <div class="row">
+           <div class="col-3 box">
+               <img src="logo.jpg" width="150px" height="150px">
+           </div>
+           <div class="col-9 box fles top">
+                <a href="/"><h6>HOME</h6></a>
+                <h6><a href="/gallery"> GALLERY</a></h6>
+               <a href="/portfolio"><h6>PORTFOLIO</h6></a>
+               <a href="/blog" class="active_a"><h6>BLOG</h6></a>
+               <a href="/about"><h6>ABOUT</h6></a>
+               <a href="/contact"><h6>CONTACT</h6></a>
+                <button class="btn btn-block book" disabled><a href="/booking">Book Online</a></button>
+           </div>
+       </div>
+   </div>
+   <%- include('./partials/mobile_nav')%>
+    <%- include('./partials/register')%>
+    <div class="container-fluid blog">
+        <div class="row">
+            <div class="col-12 blog_head">
+                <h3>Recent Blog Post</h3> 
+                 <% let isAdmin = data.admin; %>
+                <% if(isAdmin === true){ %>
+                <button id="createBlog">Create Blog</button>
+                <%}%>
+            </div>
+        </div>
+        <!-- Ejs javascript inject to setup dynamic data from node backend -->
+
+        <!-- variable declaration -->
+        <% let myData = data.arr; %>
+        <!-- condition to check if array input is empty -->
+        <% if(myData.length == 0){ %>
+        <!-- setup for if the array is empty -->
+              <div class="container-fluid page404 blog">
+                  <div class="row mid_blog">
+                      <div class="col-12 blog_text">
+                          <h1>No Current Blog Post</h1>
+                     </div>
+                  </div>
+              </div>
+        <% }else{ %>
+        <!-- setup for if the array is not empty -->
+        <% myData.forEach((item)=>{ %>
+          <div class="row blog_body">
+              <div class="blog_body_top">
+                  <h2>Topic - <%= item.topic %></h2>
+                  <i class="fa fa-trash fa-2x blog_trash"  id="<%= item._id %>"></i>
+               </div> 
+               <p> 
+                  <%= item.body %>
+               </p>
+               <h5 class="date">
+                   Date - <%= item.date %>
+               </h5>
+          </div>
+          <% })%>
+      <% } %>
+    <div class="container-fluid blogForm">
+        <div class="row">
+             <div class="col-6">
+                <div class="col-12 form-control">
+                    <form action="/create/blog" method="Post" id="blogForm">
+                        <label for="topic">TOPIC</label>
+                        <input class="form-control" type="text" name="topic" id="topic" placeholder="TOPIC" required><br>
+                        <textarea id="body" name="body" placeholder="Type your blog here ...." cols="34" rows="10" required></textarea><br>
+                        <button class="btn btn-info">Post</button>
+                    </form>
+                    <button class="btn btn-block btn-danger"><i class="fa fa-times-rectangle discard">Discard</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include('./partials/foot')%>
+</body>
+</html>

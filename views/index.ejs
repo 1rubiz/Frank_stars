@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head')%>
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/mobile_nav')%>
+    <!-- nav stays here -->
+    <%- include('./partials/nav')%>
+    <div class="container-fluid desktop_nav">
+    <div class="row">
+        <div class="col-3 box">
+            <img src="logo.jpg" width="150px" height="150px">
+        </div>
+        <div class="col-9 box fles top">
+            <a href="/" class="active_a"><h6>HOME</h6></a>
+            <h6><a href="/gallery"> GALLERY</a></h6>
+           <a href="/portfolio"><h6>PORTFOLIO</h6></a>
+           <a href="/blog"><h6>BLOG</h6></a>
+           <a href="/about"><h6>ABOUT</h6></a>
+           <a href="/contact"><h6>CONTACT</h6></a>
+            <button class="btn btn-block book" disabled><a href="/booking">Book Online</a></button>
+        </div>
+    </div>
+</div>
+    <div class="container-fluid description ">
+        <div class="row">
+            <div class="col-3 landing"><i class="fa fa-chevron-circle-left fa-4x direct slide_left"></i></div>
+            <div class="col-6 col -sm-12 landing center">
+                <div class="intro">
+                <h1>We Will Make You Stylish</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.                </p>
+            </div>
+                <button class="btn btn-block more"><a href="/about" class="rubiz">READ MORE</a></button><br>
+                <div class="bar">
+                    <button class="bar1 active"></button>
+                <button class="bar2"></button>
+                <button class="bar3"></button>
+                <button class="bar4"></button>
+                <button class="bar5"></button>
+                </div>
+            </div>
+            <div class="col-3 landing"><i class="fa fa-chevron-circle-right fa-4x direct slide_right"></i></div>
+        </div>
+    </div>
+    <div class="mini_view">
+        <div class="col-12"> <img src="logo.jpg"> </div>
+        <div class="col-12"> <img src="img1.jpg"> </div>
+        <!-- <div class="col-12"> <img src="img7.jpg"> </div> -->
+        <div class="col-12"> <img src="img2.jpg"> </div>
+        <!-- <div class="col-12"> <img src="img8.jpg"> </div> -->
+        <div class="col-12"> <img src="img6.jpg"> </div>
+    </div>
+    <%- include('./partials/register')%>
+    <%- include('./partials/foot')%>
+</body>
+</html>

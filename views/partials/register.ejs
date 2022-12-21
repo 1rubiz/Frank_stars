@@ -1,0 +1,74 @@
+<div class="container register">
+    <i class="fa fa-times-rectangle fa-2x trash"></i>
+    <div class="card">
+        <div class="card-image">    
+            <h4 class="card-heading">
+                <em>Only admins can sign in. <a href="/contact">Contact FrankStars to get access.</a></em>
+            </h4>
+        </div>
+        <!--<form class="card-form reg_row" id="register_user" action="/register/me" method="POST">
+            <div class="input">
+                <input type="text" class="input-field" value="" name="fullname" required/>
+                <label class="input-label">Full name</label>
+            </div>
+                        <div class="input">
+                <input type="text" class="input-field" value="" name="email" required/>
+                <label class="input-label">Email</label>
+            </div>
+                        <div class="input">
+                <input type="password" class="input-field" name="password" required/>
+                <label class="input-label">Password</label>
+            </div>
+            <div class="action">
+                <button class="action-button">Get started</button>
+            </div>
+            <p>Already have an account? <button><span class="sign">SIGN IN</span></button></p>
+        </form>-->
+        <form class="card-form sign_row" id="log_user">
+                <div class="input">
+                <input type="text" class="input-field" value="" name="email" required/>
+                <label class="input-label">Email</label>
+            </div>
+                        <div class="input">
+                <input type="password" class="input-field" name="password" required/>
+                <label class="input-label">Password</label>
+            </div>
+            <div class="action">
+                <button class="action-button">Sign In</button>
+            </div>
+            <!--<p>Don't have an account? <button><span class="sign">Register</span></button></p>-->
+        </form>
+        <div class="card-info">
+            <p><b><em>Only admins can sign in. <a href="/contact">Contact FrankStars to get access.</a></em></b></p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <div class="container register">
+    <i class="fa fa-times-rectangle fa-2x trash"></i>
+    <div class="row reg_row">
+        <div class="col-12">
+            <form action="/register/me" method="POST" id="register_user">
+                <input class="form-control input-default" type="text" name="firstname" id="first-name" placeholder="Firstname"><br>
+                <input class="form-control input-default" type="text" id="last-name" name="lastname" placeholder="Last name"><br>
+                <input class="form-control input-default" type="email" id="email" name="email" placeholder="Email"><br>
+                <input class="form-control input-default" type="password" name="password" placeholder="PassWord" id="password">
+                <button type="submit" class="btn btn-block btn-info reg_btn">Register</button>
+                <p>Already have an account? <span class="sign">SIGN IN</span></p>
+            </form>
+           
+        </div>
+    </div>
+    <div class="row sign_row">
+        <div class="col-12">
+        <form action="/login/me" method="POST" id="log_user">
+                <input class="form-control input-default" placeholder="Email Adress" type="email" name="email" id="email2"><br>
+                <input class="form-control input-default" placeholder="PassWord" type="password" name="password" id="password2">
+            <button type="submit" class="btn btn-block btn-primary">Sign in</button>
+            <p>Don't have an account? <span class="sign">Register</span></p>
+        </form>
+        </div>
+    </div>
+</div> -->
