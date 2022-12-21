@@ -17,15 +17,15 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MONGOOSE connect string for mongodb setup
-mongoose.connect(process.env.DB_CONNECT);
+//mongoose.connect(process.env.DB_CONNECT);
 // on connect listen for port 8000
-mongoose.connection.once('open', ()=>{
+//mongoose.connection.once('open', ()=>{
     app.listen(8000, ()=>{
     console.log("Server setup at port 8000....")
 });
-}).on('error', (err)=>{
-    console.log("db error"+err);
-});
+//}).on('error', (err)=>{
+  //  console.log("db error"+err);
+//});
 
 // Data set
 let data = {
