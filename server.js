@@ -7,8 +7,9 @@ const User = require('./models/user');
 const Blog = require('./models/create_blog');
 
 dotenv.config()
-// console.log(process.env.DB_USER)
-
+console.log(process.env.DB_STRING)
+// mongodb+srv://Rubiz-creator:crimsonCREATOR@cluster0.eutdgra.mongodb.net/?retryWrites=true&w=majority
+// mongodb+srv://Frankstars:<password>@star0.utmbwmm.mongodb.net/?retryWrites=true&w=majority
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -17,15 +18,15 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MONGOOSE connect string for mongodb setup
-//mongoose.connect(process.env.DB_CONNECT);
+mongoose.connect(process.env.DB_STRING);
 // on connect listen for port 8000
-//mongoose.connection.once('open', ()=>{
+mongoose.connection.once('open', ()=>{
     app.listen(8000, ()=>{
     console.log("Server setup at port 8000....")
 });
-//}).on('error', (err)=>{
-  //  console.log("db error"+err);
-//});
+}).on('error', (err)=>{
+   console.log("db error"+err);
+});
 
 // Data set
 let data = {
@@ -69,19 +70,19 @@ app.get('/about', (req, res)=>{
 
 // work in progress
 app.get('/blog', (req, res)=>{
-    // Blog.find()
-    // .then((result)=>{
-    //     const myArr=result.reverse();
-    //     data.isEmpty = false;
-    //     if (result == null){
-    //         data.isEmpty = true;
-    //     }
-    //     data.arr = myArr;
+    Blog.find()
+    .then((result)=>{
+        const myArr=result.reverse();
+        data.isEmpty = false;
+        if (result == null){
+            data.isEmpty = true;
+        }
+        data.arr = myArr;
       res.render('blog', {data})        
-    // })
-    // .catch((err)=>{
-        // console.log(err);
-    // })
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
 });
 const blogRemover= (e)=>{
     Blog.findOneAndRemove(e)
