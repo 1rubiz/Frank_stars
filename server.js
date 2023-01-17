@@ -8,8 +8,7 @@ const Blog = require('./models/create_blog');
 
 dotenv.config()
 console.log(process.env.DB_STRING)
-// mongodb+srv://Rubiz-creator:crimsonCREATOR@cluster0.eutdgra.mongodb.net/?retryWrites=true&w=majority
-// mongodb+srv://Frankstars:<password>@star0.utmbwmm.mongodb.net/?retryWrites=true&w=majority
+
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
