@@ -69,19 +69,19 @@ app.get('/about', (req, res)=>{
 
 // work in progress
 app.get('/blog', (req, res)=>{
-    Blog.find()
-    .then((result)=>{
-        const myArr=result.reverse();
-        data.isEmpty = false;
-        if (result == null){
-            data.isEmpty = true;
-        }
-        data.arr = myArr;
+    // Blog.find()
+    // .then((result)=>{
+    //     const myArr=result.reverse();
+    //     data.isEmpty = false;
+    //     if (result == null){
+    //         data.isEmpty = true;
+    //     }
+    //     data.arr = myArr;
       res.render('blog', {data})        
-    })
-    .catch((err)=>{
-        console.log(err);
-    })
+    // })
+    // .catch((err)=>{
+        // console.log(err);
+    // })
 });
 const blogRemover= (e)=>{
     Blog.findOneAndRemove(e)
