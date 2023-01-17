@@ -7,7 +7,7 @@ const User = require('./models/user');
 const Blog = require('./models/create_blog');
 
 dotenv.config()
-console.log(process.env.DB_STRING)
+// console.log(process.env.DB_STRING)
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
